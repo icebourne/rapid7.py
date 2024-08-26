@@ -7,8 +7,6 @@ import warnings
 import re
 from datetime import datetime, timedelta
 
-# import 更新数据源
-# import 数据传输
 from dateutil import parser
 import pytz
 import os
@@ -28,12 +26,7 @@ label_path = '//*[@id="post-bottom-info"]/div/div[1]/div/div/ul/li/a' #
 
 content_path = '/html/body/div[2]/div/div[2]/div[2]/section/div/div/div[1]/div[1]/div[2]/'
 
-url = ['https://www.rapid7.com/blog/posts'
-       # 'https://cn-sec.com/archives/category/%e5%ae%89%e5%85%a8%e6%96%b0%e9%97%bb/page/2#google_vignette',
-       # 'https://cn-sec.com/archives/category/%e5%ae%89%e5%85%a8%e6%96%b0%e9%97%bb/page/3#google_vignette',
-       # 'https://cn-sec.com/archives/category/%e5%ae%89%e5%85%a8%e6%96%b0%e9%97%bb/page/4#google_vignette',
-       # 'https://cn-sec.com/archives/category/%e5%ae%89%e5%85%a8%e6%96%b0%e9%97%bb/page/5#google_vignette'
-       ]
+url = ['https://www.rapid7.com/blog/posts']
 
 headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
@@ -44,7 +37,7 @@ headers = {
 def get_tree(url):
     # session = HTMLSession()
 
-    # # 往新浪新闻主页发送get请求
+    # #get
     # response = session.get(url)
     # response.encoding = 'utf-8'
     # html = response.html.render()
